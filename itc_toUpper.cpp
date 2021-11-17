@@ -2,8 +2,7 @@
 
 unsigned char itc_toUpper(unsigned char c)
 {
-    if (97 <= c && c <= 122)
-        return c - 32;
-    else
-        return c;
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return c;
 }

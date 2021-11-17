@@ -2,7 +2,9 @@
 
 unsigned char itc_changeCase(unsigned char c)
 {
-	if ((c >= 'a') && (c <= 'z')) return itc_toUpper(c);
-	else if ((c >= 'A') && (c <= 'Z')) return c + 32;
+	if (c >= 'a' && c <= 'z')
+		c = itc_toUpper(c);
+	else if (c >= 'A' && c <= 'Z')
+		c += 32;
 	return c;
 }

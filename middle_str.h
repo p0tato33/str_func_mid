@@ -19,3 +19,4 @@ bool itc_isIp(string str);                      //11
 string itc_DecToBin(string str);                //12
 string itc_decToBase(int num, int base);        //13
 long long itc_len(string str);
+string itc_rev_str(string str);

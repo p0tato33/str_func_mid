@@ -9,7 +9,7 @@ long long itc_len(string str) {
 
 bool itc_Compare(string S1, string S2)
 {
-    long long len1 = itc_len(S1),
+    long long len1 = itc_len(S1);
     long long len2 = itc_len(S2);
     if (len1 != len2)
         return false;

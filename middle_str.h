@@ -18,3 +18,4 @@ string itc_rmFreeSpace(string str);	        //10
 bool itc_isIp(string str);                      //11
 string itc_DecToBin(string str);                //12
 string itc_decToBase(int num, int base);        //13
+long long itc_len(string str);

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-bool itc_isDigit(unsigned char c);	    //1
+bool itc_isDigit(unsigned char c);	      //1
 unsigned char itc_toUpper(unsigned char c);     //2
 unsigned char itc_changeCase(unsigned char c);  //3
 bool itc_сompare(string s1, string s2);         //4

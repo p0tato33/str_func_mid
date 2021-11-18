@@ -7,18 +7,10 @@ long long itc_len(string str) {
     } return counter;
 }
 
-bool itc_compare(string s1, string s2)
-{
-	long long lenght = itc_len(s1);
-	bool ans = (lenght == itc_len(s2));
-	if (ans == false) {
-		return ans;
-	}
-	for (int i = 0; i < lenght; i++) {
-		ans = (s1[i] == s2[i]);
-		if (ans == false) {
-			return ans;
-		}
-	}
-	return ans;
+bool itc_compare(string s1, string s2) {
+    unsigned long long size1 = itc_len(s1);
+    unsigned long long size2 = itc_len(s2);
+    if(size1 != size2 || size1 == 0 || size2 == 0)return 0;
+    for(unsigned long long i = 0;i < size1;i++)if(s1[i]!=s2[i])return 0;
+    return 1;
 }

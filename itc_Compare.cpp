@@ -7,7 +7,7 @@ long long itc_len(string str) {
     } return counter;
 }
 
-bool itc_Compare(string s1, string s2)
+bool itc_compare(string s1, string s2)
 {
     long long len1 = itc_len(s1);
     long long len2 = itc_len(s2);

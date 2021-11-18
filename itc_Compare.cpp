@@ -1,12 +1,5 @@
 #include "middle_str.h"
 
-long long itc_len(string str) {
-    int counter = 0;
-    while (str[counter] != '\0') {
-        counter += 1;
-    } return counter;
-}
-
 bool itc_compare(string s1, string s2) {
     unsigned long long size1 = itc_len(s1);
     unsigned long long size2 = itc_len(s2);

@@ -21,3 +21,4 @@ string itc_decToBase(int num, int base);
 int itc_len(string str);
 string itc_rev_str(string str);
 string itc_slice_str(string str, int start, int end);
+int itc_find_str(string str1, string str2);

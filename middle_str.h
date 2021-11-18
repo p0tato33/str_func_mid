@@ -20,3 +20,4 @@ string itc_DecToBin(string str);
 string itc_decToBase(int num, int base); 
 int itc_len(string str);
 string itc_rev_str(string str);
+string itc_slice_str(string str, int start, int end);

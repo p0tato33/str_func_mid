@@ -1,17 +1,16 @@
 #include "middle_str.h"
 
-bool itc_сompare(string s1, string s2) {
-    long long lenght;
-    long long lenght2;
-    lenght = itc_len(s1);
-    lenght2 = itc_len(s2);
-    long long i = 0;
-    if (lenght != lenght2)
+bool itc_compare(string s1, string s2)
+{
+    if (s1 == "" || s2 == "")
         return false;
-    while (s1[i] <= '\0') {
+    long long lenght = itc_len(s1);
+    long long length2 = itc_len(s2);
+    if (lenght != length2)
+        return false;
+    for (int i = 0; i < lenght; i++) {
         if (s1[i] != s2[i])
             return false;
-        i++;
     }
     return true;
 }

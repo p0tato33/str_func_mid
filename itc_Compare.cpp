@@ -7,8 +7,18 @@ long long itc_len(string str) {
     } return counter;
 }
 
-bool itc_compare(string s1, string s2) {
-    if (itc_len(s1) != itc_len(s2) || s1 == "" || s2 == "") return false;
-    for (long long i = 0; i != itc_len(s1) - 1; i++) if (s1[i] != s2[i]) return false;
-    return true;
+bool itc_compare(string s1, string s2)
+{
+	long long lenght = itc_len(s1);
+	bool ans = (lenght == itc_len(s2));
+	if (ans == false) {
+		return ans;
+	}
+	for (int i = 0; i < lenght; i++) {
+		ans = (s1[i] == s2[i]);
+		if (ans == false) {
+			return ans;
+		}
+	}
+	return ans;
 }

@@ -1,32 +1,28 @@
 #include "middle_str.h"
 
 string itc_rmFreeSpace(string str) {
-    long long lenght = itc_len(str);
-    string ans;
-    for (int i = 0; i < lenght; i++) {
-        if (str[i] != ' ' and str[i + 1] != ' ') {
-            ans += str[i];
+    if (itc_len(str) == 0) return "";
+    string sp = "";
+    string res = "";
+    bool flag2 = false;
+    bool flag = false;
+    for (long long i = 0; i < itc_len(str); i++) {
+        if (str[0] == ' ' && !flag) {
+            while (str[i] == ' ') {
+                i++;
+            }
+            flag = true;
         }
-        if (str[i + 1] == ' ' and str[i] != ' ') {
-            ans += str[i];
-            ans += ' ';
+        if (str[i] == ' ' && !flag2) {
+            flag2 = true;
+            sp += ' ';
         }
+        if (flag2 && str[i] != ' ') flag2 = false;
+        if (!flag2) sp += str[i];
     }
-    int lenght2 = itc_len(ans);
-    if (ans[lenght2 - 1] == ' ') {
-        return itc_slice_str(ans, 0, itc_len(ans) - 2);
+    if (sp[itc_len(sp) - 1] == ' ') {
+        for (long long i = 0; i < itc_len(sp) - 1; i++) res += sp[i];
     }
-    return ans;
+    else res = sp;
+    return res;
 }
-
-string itc_slice_str(string str, int start, int end) {
-	long long len = itc_len(str);
-	if (start > end)
-		return str;
-	if (end >= len){ 
-		end = len - 1;
-  }string ans = "";
-	for(long long i = start; i <= end && i < len; i++) {
-		ans += str[i];
-	}
-	return ans;
